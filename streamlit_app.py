@@ -47,5 +47,5 @@ if ingredients_list:
     
 #new section to display nutrition information from smoothiefroot.com using API calls
 import requests
-sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/#")
+sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/mango")
 st.text(sf_response)
