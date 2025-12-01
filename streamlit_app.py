@@ -32,7 +32,8 @@ if ingredients_list:
     ingredients_string = ''
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
-        sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen )
+        #sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen )
+        sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on )
         #st.text(sf_response)  # returns HTTP response code like 200 or 404
         sf_df = st.dataframe(data=sf_response.json(), use_container_width=True)
     #st.write(ingredients_string)
