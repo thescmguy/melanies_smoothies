@@ -37,7 +37,7 @@ if ingredients_list:
         #sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen )
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         st.subheader(fruit_chosen + ' Nutrition Information')
-        sf_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on )
+        sf_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}" )
         #st.text(sf_response)  # returns HTTP response code like 200 or 404
         sf_df = st.dataframe(data=sf_response.json(), use_container_width=True)
     #st.write(ingredients_string)
